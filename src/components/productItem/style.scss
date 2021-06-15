@@ -1,0 +1,178 @@
+.product__item {
+    padding: 10px 12px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    position: relative;
+
+    .product--add-cart {
+        position: absolute;
+        bottom: -6px;
+        height: 40px;
+        background-color: #222;
+        color: #fff;
+        width: 92.5%;
+        text-align: center;
+        line-height: 40px;
+        font-weight: 600;
+        font-size: 1.3rem;
+        transition: all ease-out 0.4s;
+        opacity: 0;
+
+        &:hover {
+            background-color: #ff7800;
+        }
+    }
+
+    &:hover {
+        .product--add-cart {
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    }
+
+    .product__info {
+        text-align: center;
+
+        .product__name {
+            a {
+                font-size: 1.3rem;
+                color: #666;
+                text-decoration: none;
+            }
+        }
+
+        .product__price {
+            .product__price--new {
+                color: #222;
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+            .product__price--old {
+                color: rgb(182, 181, 181);
+                font-weight: 500;
+                text-decoration: line-through;
+                margin-left: 12px;
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    &:hover {
+        .product__img {
+            .product__item--action {
+                opacity: 1;
+                right: 2%;
+                bottom: 2%;
+            }
+        }
+    }
+
+    .product__img {
+        position: relative;
+
+        .product__item--action {
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transition: all ease-out 0.4s;
+
+            span {
+                width: 40px;
+                height: 40px;
+                border-radius: 4px;
+                background-color: #fff;
+                border: 1px solid #e4e4e4;
+                color: #666;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.4rem;
+
+                & + span {
+                    margin-top: 6px;
+                }
+
+                &:hover {
+                    color: #ff7800;
+                }
+            }
+        }
+
+        .product__img--2 {
+            display: none;
+        }
+
+        .product__new {
+            position: absolute;
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+            top: 5%;
+            width: 46px;
+            height: 20px;
+            background-color: #8dca57;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                border-top: 3px solid #fa4c3c;
+                border-left: 3px solid transparent;
+                filter: brightness(60%);
+            }
+        }
+
+        .product__sale {
+            position: absolute;
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+            top: 5%;
+            right: 0;
+            width: 46px;
+            height: 20px;
+            background-color: #fe4848;
+        }
+
+        &:hover {
+            .product__img--2 {
+                animation: img-product-fadeIn 0.4s ease-out;
+                animation-duration: 1.5s;
+                display: block;
+            }
+            .product__img--1 {
+                animation: slide-img-product 0.4s ease-out;
+                animation-duration: 1.5s;
+                display: none;
+            }
+        }
+
+        @keyframes img-product-fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes img-product-fadeOut {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+}

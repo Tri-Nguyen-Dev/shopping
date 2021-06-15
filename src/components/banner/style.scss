@@ -1,0 +1,109 @@
+.banner {
+    margin-top: 60px;
+
+    .slick-slide {
+        &.slick-active {
+            .slider__item {
+                .banner__description {
+                    display: block;
+                }
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                top: 70%;
+            }
+            100% {
+                opacity: 1;
+                top: 50%;
+            }
+        }
+
+        .slider__item {
+            position: relative;
+            .banner__description {
+                display: none;
+                z-index: 999;
+                position: absolute;
+                width: 300px;
+                left: 15%;
+                transform: translateY(-50%);
+                transition: all ease-in-out 0.4s;
+                animation: fadeIn ease-in-out 0.4s forwards;
+                animation-duration: 1.5s;
+
+                .banner__description--title {
+                    color: #ff7800;
+                    font-size: 4rem;
+                    margin: 0;
+                    letter-spacing: 0.4rem;
+                    font-weight: 700;
+                }
+
+                .banner__description--content {
+                    color: #666;
+                    font-size: 1.8rem;
+                    line-height: 2.5rem;
+                    font-weight: 500;
+                    margin: 18px 0;
+                }
+
+                .banner__description--btn {
+                    cursor: pointer;
+                    border: none;
+                    outline: none;
+                    padding: 10px 20px;
+                    background-color: #ff7800;
+                    color: #fff;
+                    font-size: 2rem;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        bottom: 10px;
+
+        li {
+            padding: 0 10px;
+
+            button {
+                &::before {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* mobile vs tablet */
+
+@media only screen and (max-width: 1023px) {
+    .banner {
+        .slider__item {
+            .banner__description {
+                .banner__description--content {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/* mobile < 740px */
+
+@media only screen and (max-width: 739px) {
+}
+
+/* Tablet >= 740px < 1024px */
+
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+}
+
+/* pc >= 1024px */
+
+@media only screen and (min-width: 1024) {
+}

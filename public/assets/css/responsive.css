@@ -1,0 +1,21 @@
+/* media query */
+
+/* mobile vs tablet */
+
+@media only screen and (max-width: 1023px) {
+}
+
+/* mobile < 740px */
+
+@media only screen and (max-width: 739px) {
+}
+
+/* Tablet >= 740px < 1024px */
+
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+}
+
+/* pc >= 1024px */
+
+@media only screen and (min-width: 1024) {
+}

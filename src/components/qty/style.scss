@@ -1,0 +1,34 @@
+.qty {
+    height: 40px;
+    width: 100px;
+    display: flex;
+    border: 1px solid #ebebeb;
+
+    input {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        outline: none;
+        border: none;
+        font-size: 1.3rem;
+        color: #777;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        background-color: #ebebeb;
+    }
+
+    .qty__minus,
+    .qty__plus {
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+        width: 35px;
+        font-size: 1.3rem;
+        color: #777;
+    }
+}
