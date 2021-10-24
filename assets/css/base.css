@@ -1,0 +1,26 @@
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: Rajdhani, HelveticaNeue, "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*  */
+
+::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff7800;
+}
